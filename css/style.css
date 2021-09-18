@@ -596,7 +596,6 @@ body._lock::before {
   font-family: inherit;
   font-weight: 600;
   letter-spacing: 0;
-  font-size: calc(12px + 8 * ((100vw - 320px) / 978));
   display: inline-block;
   margin-bottom: 30px;
 }
@@ -718,6 +717,10 @@ body._lock::before {
 
   .vloger__info-social__followers {
     font-size: calc(13px + 7 * ((100vw - 320px) / 978));
+  }
+
+  .footer__nav-link {
+    font-size: calc(12px + 8 * ((100vw - 320px) / 978));
   }
 }
 

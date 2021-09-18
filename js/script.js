@@ -77,3 +77,10 @@ if(burger){
         }
     })
 }
+
+// add breadcrumbs
+if(document.body.dataset.init === 'vloger'){
+        let newBreadCrumb = document.createElement('li')
+         newBreadCrumb.innerHTML = `<a href="/" class="header__lower-breadcrumbs__link">Максим Максимов</a>`
+        document.querySelector('.header__lower-breadcrumbs').appendChild(newBreadCrumb)
+}
