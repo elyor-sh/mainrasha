@@ -205,6 +205,7 @@ body {
   opacity: 0.8;
   border-radius: 20px;
   padding: 2px 11px 3px;
+  pointer-events: none;
 }
 
 .header__lower-breadcrumbs li:last-child::after {
@@ -218,6 +219,192 @@ body {
   font-family: inherit;
   font-weight: 300;
   letter-spacing: 0;
+}
+
+/* =======================<VLOGERS>===================================*/
+
+.vlogers {
+  padding: 30px 0px 62px;
+}
+
+.title {
+  color: #EFF3F5;
+  font-size: 50px;
+  line-height: 60.96px;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.vlogers__title {
+  text-align: center;
+}
+
+.vlogers__row {
+  margin: 54px 0px 50px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.vlogers__select-title {
+  color: #EFF3F5;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.vlogers__select {
+  position: relative;
+  max-width: 240px;
+  width: 100%;
+  margin-left: 40px;
+}
+
+.vlogers__select-label {
+  min-width: 100%;
+  position: relative;
+  display: block;
+}
+
+.vlogers__select-label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  border: solid #EFF3F5;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.vlogers__select-input {
+  width: 100%;
+  background: transparent;
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 19.92px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.vlogers__select-input::-webkit-input-placeholder {
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 19.92px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.vlogers__select-input::-moz-placeholder {
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 19.92px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.vlogers__select-input:-ms-input-placeholder {
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 19.92px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.vlogers__select-input::-ms-input-placeholder {
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 19.92px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.vlogers__select-input::placeholder {
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 19.92px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.vlogers__option-list {
+  background: rgba(110, 16, 94, 0.5);
+  -webkit-box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+          box-shadow: inset 0px 0px 5px 5px rgba(255, 255, 255, 0.25);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 12px;
+  padding: 10px;
+  height: 0;
+  width: 100%;
+  -webkit-transition: .10s;
+  -o-transition: .10s;
+  transition: .10s;
+  overflow: hidden;
+}
+
+.vlogers__option {
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  left: 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: .10s;
+  -o-transition: .10s;
+  transition: .10s;
+}
+
+.vlogers__option._active {
+  max-height: 100%;
+  overflow: visible;
+}
+
+.vlogers__option._active .vlogers__option-list {
+  height: 100%;
+}
+
+.vlogers__option-item {
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 18.96px;
+  font-family: inherit;
+  font-weight: normal;
+  letter-spacing: 0;
+  padding-bottom: 5px;
+  white-space: nowrap;
+  padding: 3px 10px;
+}
+
+.vlogers__option-item:last-child {
+  padding-bottom: 0;
+}
+
+.vlogers__option-item.disabled {
+  opacity: 0.4;
+}
+
+.vlogers__option-item.disabled:hover {
+  background: transparent;
+  border-radius: 0;
+}
+
+.vlogers__option-item:hover {
+  background: #D26600;
+  border-radius: 5px;
 }
 
 /* ========================<MEDIA>=============================== */
