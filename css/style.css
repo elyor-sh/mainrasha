@@ -124,9 +124,11 @@ h6 {
 /* =======================<STYLES>===================================*/
 
 body {
-  background: #6E105E;
-  font-family: 'Montserrat', sans-serif;
+  background: #6e105e;
+  font-family: "Montserrat", sans-serif;
 }
+
+/* =======================<HEADER>===================================*/
 
 .header__top-item {
   padding-right: 30px;
@@ -150,12 +152,6 @@ body {
 }
 
 .header__top-lang__item {
-  color: #EFF3F5;
-  font-size: 20px;
-  line-height: 24px;
-  font-family: inherit;
-  font-weight: 600;
-  letter-spacing: 0;
   padding-left: 3px;
 }
 
@@ -165,6 +161,62 @@ body {
   line-height: 24px;
   font-family: inherit;
   font-weight: 600;
+  letter-spacing: 0;
+}
+
+.slash {
+  color: #EFF3F5;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.header__lower {
+  margin-top: 33px;
+}
+
+.header__lower-breadcrumbs li {
+  padding: 0px 8px;
+  position: relative;
+}
+
+.header__lower-breadcrumbs li::after {
+  content: "/";
+  position: absolute;
+  right: 0;
+  top: 3px;
+  color: #EFF3F5;
+}
+
+.header__lower-breadcrumbs li:first-child {
+  padding-left: 0;
+}
+
+.header__lower-breadcrumbs li:last-child .header__lower-breadcrumbs__link {
+  color: #6e105e;
+  font-size: 13.12px;
+  line-height: 17.04px;
+  font-family: inherit;
+  font-weight: 300;
+  letter-spacing: 0;
+  background: #EFF3F5;
+  opacity: 0.8;
+  border-radius: 20px;
+  padding: 2px 11px 3px;
+}
+
+.header__lower-breadcrumbs li:last-child::after {
+  display: none;
+}
+
+.header__lower-breadcrumbs__link {
+  color: #EFF3F5;
+  font-size: 13.12px;
+  line-height: 17.04px;
+  font-family: inherit;
+  font-weight: 300;
   letter-spacing: 0;
 }
 
