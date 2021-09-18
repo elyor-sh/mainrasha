@@ -135,7 +135,7 @@ body::before {
   top: 0;
   width: 0;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 9;
 }
 
@@ -253,6 +253,7 @@ body._lock::before {
   font-family: inherit;
   font-weight: 800;
   letter-spacing: 0;
+  font-size: calc(20px + 30 * ((100vw - 320px) / 978));
 }
 
 .vlogers__title {
@@ -264,6 +265,8 @@ body._lock::before {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .vlogers__select-title {
@@ -427,12 +430,29 @@ body._lock::before {
   border-radius: 5px;
 }
 
-.vlogers__card {
+.vlogers__card-box {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 23.5%;
           flex: 0 0 23.5%;
-  position: relative;
   margin-bottom: 50px;
+}
+
+.vloger_info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0px 12px 6px;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.vlogers__card {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .vlogers__card::before {
@@ -448,6 +468,10 @@ body._lock::before {
   transition: .3s;
 }
 
+.vlogers__card:hover .vloger_info {
+  bottom: 100%;
+}
+
 .vlogers__card:hover::before {
   height: 0;
 }
@@ -459,13 +483,6 @@ body._lock::before {
 
 .vlogers__img img {
   width: 100%;
-}
-
-.vloger_info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 0px 12px 6px;
 }
 
 .vloger__name {
@@ -642,6 +659,38 @@ body._lock::before {
   }
 }
 
+@media (max-width: 1300px) {
+  .vlogers__card-box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+    padding: 0px 5px;
+  }
+
+  .vlogers__cards-row {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    position: relative;
+  }
+}
+
+@media (max-width: 1298px) {
+  .vloger__name {
+    font-size: calc(16px + 14 * ((100vw - 320px) / 978));
+  }
+
+  .vloger__info-social__followers {
+    font-size: calc(13px + 7 * ((100vw - 320px) / 978));
+  }
+}
+
+@media (max-width: 992px) {
+  .vlogers__select {
+    margin-left: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .header__top-nav {
     position: absolute;
@@ -715,5 +764,27 @@ body._lock::before {
 
   .header__burger._openMenu span:nth-child(2) {
     width: 0;
+  }
+
+  .vlogers__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .vlogers__select {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .vlogers__card-box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding: 0px 10px;
   }
 }
