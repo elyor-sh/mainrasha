@@ -253,7 +253,6 @@ body._lock::before {
   font-family: inherit;
   font-weight: 800;
   letter-spacing: 0;
-  font-size: calc(20px + 30 * ((100vw - 320px) / 978));
 }
 
 .vlogers__title {
@@ -615,6 +614,108 @@ body._lock::before {
   padding-right: 0;
 }
 
+/* =======================<-----VLOGER.HTML------->===================================*/
+
+/* =======================<CARD>===================================*/
+
+.card {
+  padding: 51px 0px 81px;
+}
+
+.card__box {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid #EFF3F5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.card__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 31.5%;
+          flex: 0 0 31.5%;
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.card__about {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 68.5%;
+          flex: 0 0 68.5%;
+  padding: 30px 40px;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #EFF3F5;
+  margin-top: 30px;
+}
+
+.card__followers {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card__followers-row {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 30px;
+}
+
+.card__followers-count {
+  padding-left: 20px;
+}
+
+.card__followers-count p:first-child {
+  color: #EFF3F5;
+  font-size: 30px;
+  line-height: 36.96px;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.card__followers-count p:last-child {
+  display: inline-block;
+  padding-top: 2px;
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.card__info-title {
+  padding: 30px 0px 10px;
+  color: #EFF3F5;
+  font-size: 30px;
+  line-height: 36.96px;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.card__info-text {
+  color: #EFF3F5;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
 /* ========================<MEDIA>=============================== */
 
 @media (min-width: 320px) {
@@ -711,6 +812,10 @@ body._lock::before {
 }
 
 @media (max-width: 1298px) {
+  .title {
+    font-size: calc(20px + 30 * ((100vw - 320px) / 978));
+  }
+
   .vloger__name {
     font-size: calc(16px + 14 * ((100vw - 320px) / 978));
   }
@@ -721,6 +826,22 @@ body._lock::before {
 
   .footer__nav-link {
     font-size: calc(12px + 8 * ((100vw - 320px) / 978));
+  }
+
+  .card__followers-count p:first-child {
+    font-size: calc(16px + 14 * ((100vw - 320px) / 978));
+  }
+
+  .card__followers-count p:last-child {
+    font-size: calc(13.6px + 2.4 * ((100vw - 320px) / 978));
+  }
+
+  .card__info-title {
+    font-size: calc(16px + 14 * ((100vw - 320px) / 978));
+  }
+
+  .card__info-text {
+    font-size: calc(13.6px + 2.4 * ((100vw - 320px) / 978));
   }
 }
 
