@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.container {
+    @media(min-width: 320px){
+        padding: 0px 5px;
+    }
+    @media(min-width: 576px){
+        padding: 0px 10px;
+    }
+    @media(min-width: 768px){
+        padding: 0px 25px;
+    }
+    @media(min-width: 992px){
+        padding: 0px 50px;
+    }
+    @media(min-width: 1200px){
+       max-width: 1070px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @media(min-width: 1400px){
+       max-width: 1298px;
+    }
+}
+.row {
+    @include f-box();
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.aic {
+    align-items: center;
+}
+

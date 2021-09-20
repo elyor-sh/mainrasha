@@ -1,0 +1,69 @@
+/* =======================<FONTS>================================ */
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format(woff),
+        url("../fonts/#{$file_name}.woff2") format(woff2);
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@import 'fonts.scss';
+
+/* =======================<NULL>================================= */
+
+@import 'null.scss';
+// =======================<VARIABLES>============================
+@import 'variables.scss';
+
+/* =======================<COMMON classes>======================= */
+
+@import 'common-classes.scss';
+
+/* =======================<STYLES>===================================*/
+
+body {
+    background: #6E105E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+}
+
+.header__top {
+}
+
+.header__top-logo {
+}
+.header__top-nav {
+
+}
+.header__top-list {
+}
+.header__top-item {
+    padding-right: 30px;
+    &:last-child{
+        padding-right: 0;
+    }
+}
+.header__top-link {
+    @include text($accent-color, 1.25*$fz, $lh, $i, $fw600, 0);
+}
+.header__top-lang {
+    max-width: 67px;
+}
+.header__top-lang__item {
+    @include text($accent-color, 1.25*$fz, $lh, $i, $fw600, 0);
+    padding-left: 3px;
+}
+.header__top-lang-link {
+    @include text($accent-color, 1.25*$fz, $lh, $i, $fw600, 0);
+}
+.slash {
+}
+
+/* ========================<MEDIA>=============================== */
+
+@import 'media.scss';

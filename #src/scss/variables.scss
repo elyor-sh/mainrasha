@@ -1,0 +1,41 @@
+$accent-color: #EFF3F5;
+$white: #ffffff;
+$fz: 16px;
+$lh: 24px;
+$ff: 'Montserrat-Thin',
+serif;
+$fw100: 100;
+$fw200: 200;
+$fw300: 300;
+$fw400: 400;
+$fw500: 500;
+$fw600: 600;
+$fw700: 700;
+$fw800: 800;
+$fw900: 900;
+$i: inherit;
+@mixin text($color, $font-size, $line-height, $font-family, $font-weight, $letter-spacing) {
+    color: $color;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin f-box() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+$maxWidth: 1170;
+
+@mixin responsive-font($pcSize, $mobSize){
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
