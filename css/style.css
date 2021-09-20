@@ -1056,6 +1056,12 @@ body::-webkit-scrollbar-thumb {
   .card__followers-icon svg {
     width: 100%;
   }
+
+  .videos__box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1186,5 +1192,11 @@ body::-webkit-scrollbar-thumb {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     padding-top: 15px;
+  }
+
+  .videos__box {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 }
