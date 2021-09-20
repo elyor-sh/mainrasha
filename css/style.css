@@ -172,9 +172,9 @@ body._lock::before {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 99;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
+  -webkit-transition: .15s;
+  -o-transition: .15s;
+  transition: .15s;
 }
 
 .cursor._activeCursor {
