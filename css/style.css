@@ -103,6 +103,15 @@ h6 {
 
 /* =======================<COMMON classes>======================= */
 
+*[data-target="true"] {
+  position: relative;
+  z-index: 5;
+}
+
+* {
+  cursor: none;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,6 +154,46 @@ body._lock {
 
 body._lock::before {
   width: 60%;
+}
+
+/* =======================<CURSOR>===================================*/
+
+.cursor {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border: solid #FE8B4C;
+  border-width: 0px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 99;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.cursor._activeCursor {
+  border-width: 2px;
+}
+
+.cursor-2 {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: #FE8B4C;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 99;
 }
 
 /* =======================<SCROLLBAR>===================================*/

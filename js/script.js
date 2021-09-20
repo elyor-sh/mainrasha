@@ -137,3 +137,32 @@ const slider = new Swiper('.others__slider', {
   }
 })
 
+//cursor
+
+let cursor = document.querySelector('.cursor')
+let cursor2 = document.querySelector('.cursor-2')
+document.addEventListener("mousemove", e => {
+  cursor.style.cssText =  cursor2.style.cssText = "left: " +e.clientX + "px; top: " + e.clientY + "px;"
+})
+
+let links = document.querySelectorAll('a')
+
+for (let i = 0; i < links.length; i++){
+  links[i].setAttribute("data-cursor", "true")
+  links[i].addEventListener('mouseenter', e => {
+    cursor.style.cssText = `width: 80px; height: 80px; border-width: 2px;`
+  })
+}
+
+document.addEventListener("mousemove", e => {
+  console.log(e.target);
+  if(e.target.hasAttribute("data-cursor") || (e.target.closest("[data-cursor='true']"))){
+    cursor.classList.add("_activeCursor")
+  }else{
+    cursor.classList.remove("_activeCursor")
+  }
+})
+
+
+
+
