@@ -1015,8 +1015,15 @@ body::-webkit-scrollbar-thumb {
     font-size: calc(12px + 8 * ((100vw - 320px) / 978));
   }
 
+  .card__followers-row {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    padding-top: 15px;
+  }
+
   .card__followers-count p:first-child {
-    font-size: calc(16px + 14 * ((100vw - 320px) / 978));
+    font-size: calc(12px + 7.2 * ((100vw - 320px) / 978));
   }
 
   .card__followers-count p:last-child {
@@ -1028,13 +1035,26 @@ body::-webkit-scrollbar-thumb {
   }
 
   .card__info-text {
-    font-size: calc(13.6px + 2.4 * ((100vw - 320px) / 978));
+    font-size: calc(12px + 4 * ((100vw - 320px) / 978));
   }
 }
 
 @media (max-width: 992px) {
   .vlogers__select {
     margin-left: 20px;
+  }
+
+  .line {
+    margin-top: 15px;
+  }
+
+  .card__followers-icon {
+    max-width: 30px;
+    width: 100%;
+  }
+
+  .card__followers-icon svg {
+    width: 100%;
   }
 }
 
@@ -1140,6 +1160,10 @@ body::-webkit-scrollbar-thumb {
         -ms-flex: 0 0 200px;
             flex: 0 0 200px;
   }
+
+  .card__img {
+    height: auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1148,5 +1172,19 @@ body::-webkit-scrollbar-thumb {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .card__box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .card__followers-row {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding-top: 15px;
   }
 }
