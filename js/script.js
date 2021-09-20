@@ -113,7 +113,27 @@ const slider = new Swiper('.others__slider', {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  slidesPerView: 4,
   spaceBetween: 10,
+  breakpoints: {
+    
+    320: {
+      slidesPerView: 1,
+     
+    },
+    
+    576: {
+      slidesPerView: 2,
+     
+    },
+   
+    992: {
+      slidesPerView: 3,
+     
+    },
+    1298: {
+      slidesPerView: 4,
+     
+    }
+  }
 })
 
